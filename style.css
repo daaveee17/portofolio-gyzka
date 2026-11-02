@@ -6,17 +6,18 @@
  {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important; /* Tambahkan !important agar tidak bisa ditimpa */
     box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth; /* HAPUS overflow-x: hidden dari sini */
+    scroll-behavior: smooth;
 }
 
 body {
     width: 100%;
-    max-width: 100%; /* Ganti overflow-x: hidden dengan max-width */
+    max-width: 100%;
+    font-family: 'Poppins', sans-serif; /* Pastikan body juga pakai Poppins */
     background: linear-gradient(to right, rgb(255, 255, 255), rgb(254, 215, 173));
 }
 
