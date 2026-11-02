@@ -3,21 +3,20 @@
 /* ==============================================================
    1. GLOBAL RESET & TYPOGRAPHY
 ============================================================== */
-* {
+ {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth; /* HAPUS overflow-x: hidden dari sini */
 }
 
 body {
     width: 100%;
+    max-width: 100%; /* Ganti overflow-x: hidden dengan max-width */
     background: linear-gradient(to right, rgb(255, 255, 255), rgb(254, 215, 173));
 }
 
@@ -165,7 +164,6 @@ nav {
     align-items: center;
     padding: 40px 60px;
     gap: 50px;
-    overflow: hidden;
 }
 
 .main-container .image {
