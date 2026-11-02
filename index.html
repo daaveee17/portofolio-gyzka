@@ -395,13 +395,39 @@
 
         document.querySelectorAll('.links a').forEach(link => {
             link.addEventListener('click', () => {
+                linksContainer.classLis    <!-- Script JS & AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Mematikan animasi AOS agar tidak ada efek geser/miring saat halaman dibuka
+        AOS.init({
+            disable: true
+        });
+    </script>
+    
+    <script>
+        const menuIcon = document.querySelector('#menu-icon');
+        const linksContainer = document.querySelector('.links');
+        const icon = menuIcon.querySelector('i');
+
+        // Buka/tutup menu saat ikon diklik di HP
+        menuIcon.addEventListener('click', () => {
+            linksContainer.classList.toggle('active');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+
+        // Menutup menu kembali secara otomatis saat salah satu link diklik
+        document.querySelectorAll('.links a').forEach(link => {
+            link.addEventListener('click', () => {
                 linksContainer.classList.remove('active');
                 icon.classList.add('fa-bars');
                 icon.classList.remove('fa-xmark');
             });
         });
     </script>
+    
     <script>
+        // Script untuk Pop-up Sertifikat (Lightbox)
         const modal = document.getElementById("image-modal");
         const modalImg = document.getElementById("modal-img");
         const closeModal = document.querySelector(".close-modal");
@@ -426,4 +452,5 @@
         });
     </script>
 </body>
+</html>
 </html>
