@@ -516,3 +516,14 @@ nav {
 .footer-subtext { font-size: 0.8rem !important; color: #888; }
 .footer-subtext a { color: rgb(254, 215, 173); text-decoration: none; font-weight: 600; transition: 0.3s; }
 .footer-subtext a:hover { color: white; }
+
+/* ==============================================================
+   PENGUNCI LAYAR KHUSUS HP (MENCEGAH GESER)
+============================================================== */
+@media (max-width: 950px) {
+    html, body {
+        overflow-x: hidden !important;
+        width: 100%;
+        position: relative;
+    }
+}
