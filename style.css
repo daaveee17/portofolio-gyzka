@@ -54,10 +54,11 @@ nav {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* TAMBAHKAN INI: Agar halaman Home tidak tertutup navbar yang fixed */
+/* Jarak aman untuk laptop (diperkecil dari 120px agar tidak terlalu jauh) */
 #home {
-    padding-top: 120px !important; 
+    padding-top: 20px !important; 
 }
+
 .nav-container {
     width: 100%;
     max-width: 1200px;
@@ -122,14 +123,30 @@ nav {
     display: none !important;
 }
 
+/* --- PENGATURAN KHUSUS HP (TAMPILAN MOBILE) --- */
 @media (max-width: 950px) {
-    .nav-container { padding: 0 20px; }
+    nav {
+        position: fixed !important; /* Memaksa navbar nempel di HP */
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #home {
+        padding-top: 120px !important; /* Jarak aman agar Home tidak tertutup navbar di HP */
+    }
+
+    .nav-container { 
+        padding: 0 20px; 
+    }
+    
     #menu-icon {
         display: block !important;
         font-size: 1.6rem;
         color: rgb(109, 67, 0);
         cursor: pointer;
     }
+    
     .nav-container .links {
         position: absolute;
         top: 80px;
@@ -145,6 +162,7 @@ nav {
         transform: translateY(-20px);
         transition: all 0.3s ease;
     }
+    
     .nav-container .links.active {
         opacity: 1;
         visibility: visible;
